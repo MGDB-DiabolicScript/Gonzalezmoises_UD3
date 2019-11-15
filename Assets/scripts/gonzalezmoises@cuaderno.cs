@@ -15,3 +15,5 @@ using UnityEngine;
 //Escala:El valor "1" es el tamaño original, Nos permite cambiar el tamaño del objeto.
 //Posicion:permite mover el objeto puesto en escena atra vez de los ejes X,Y,Z.
 //addforce:permite dar mayor fuerza de rigidbody haciendo que coja velocidad o se relentice
+
+//segun mi punto de vista sin la camara siguiendo al jugador complica todo y hace frustrante siendo necesario usar el script o otro metodo para que esta te siga
