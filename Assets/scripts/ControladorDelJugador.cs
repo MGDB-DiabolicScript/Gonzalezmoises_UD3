@@ -6,20 +6,16 @@ using UnityEngine.UI;
 public class ControladorDelJugador : MonoBehaviour
 {
     public float velocidad;
-    int puntuacion;
+    int contador;
     Rigidbody rb;
 
-   public Text puntuacion;
+   public Text marcador;
    public Text Findeljuego;
     
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        contador = 0;
-        marcador.text =”Puntos:”+ puntuacion
-        ActualizarMarcador();
-        findejuego.gameObject.SetActive(false);
     }
     void FixedUpdate()
     {
@@ -32,16 +28,13 @@ public class ControladorDelJugador : MonoBehaviour
     public void OnTriggerEnter(Collider other) //Collider es el objeto con el que ha colisionado
     {
         Destroy(other.gameObject);
-        puntuacion = puntuacion + 1;
+        contador = contador + 1;
         ActualizarMarcador();
-        if (puntuacion >= 13) //El juego finaliza a los 13 puntos
-        {
-            findejuego.gameObject.SetActive(true);
-        }
+        
     }
 
     void ActualizarMarcador()
     {
-        marcador.text = "Puntos: " + puntuacion;
+        marcador.text = "Puntos: " + contador;
     }
 }
