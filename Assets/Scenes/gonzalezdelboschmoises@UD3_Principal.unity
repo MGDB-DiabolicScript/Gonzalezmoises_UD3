@@ -1709,7 +1709,7 @@ GameObject:
   - component: {fileID: 1937737981}
   - component: {fileID: 1937737980}
   m_Layer: 5
-  m_Name: contador
+  m_Name: marcador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
