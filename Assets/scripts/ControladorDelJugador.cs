@@ -3,6 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+public class SalirDelJuego : MonoBehaviour
+{
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit(); //sale del juego. No lo pausa.
+        }
+    }
+}
+
 public class ControladorDelJugador : MonoBehaviour
 {
     public float velocidad;
@@ -16,6 +29,7 @@ public class ControladorDelJugador : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        Findeljuego.gameObject.SetActive(false);
     }
     void FixedUpdate()
     {
@@ -30,7 +44,11 @@ public class ControladorDelJugador : MonoBehaviour
         Destroy(other.gameObject);
         contador = contador + 1;
         ActualizarMarcador();
-        
+        if (contador >= 2)
+        {
+            Findeljuego.gameObject.SetActive(true);
+        }
+
     }
 
     void ActualizarMarcador()
