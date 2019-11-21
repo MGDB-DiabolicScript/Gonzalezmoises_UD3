@@ -44,7 +44,7 @@ public class ControladorDelJugador : MonoBehaviour
         Destroy(other.gameObject);
         contador = contador + 1;
         ActualizarMarcador();
-        if (contador >=13)
+        if (contador >=14)
         {
             Findeljuego.gameObject.SetActive(true);
         }
