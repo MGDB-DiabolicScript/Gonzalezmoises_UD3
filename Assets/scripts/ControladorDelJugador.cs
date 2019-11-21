@@ -20,6 +20,9 @@ public class ControladorDelJugador : MonoBehaviour
 {
     public float velocidad;
     int contador;
+    int goldpoint;
+    int item2;
+
     Rigidbody rb;
 
    public Text marcador;
@@ -41,12 +44,34 @@ public class ControladorDelJugador : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other) //Collider es el objeto con el que ha colisionado
     {
-        Destroy(other.gameObject);
-        contador = contador + 1;
-        ActualizarMarcador();
-        if (contador >=14)
+        if (other.tag == "+1")
         {
-            Findeljuego.gameObject.SetActive(true);
+            Destroy(other.gameObject);
+            contador = contador + 1;
+
+        }
+
+
+        else if (other.tag == "+2")
+        {
+            Destroy(other.gameObject);
+            contador = contador + 2;
+            goldpoint = goldpoint + 1;
+        }
+
+       else if (other.tag == "-1")
+        {
+            Destroy(other.gameObject);
+            contador = contador +1;
+            item2 = item2 - 1;
+        }
+
+        ActualizarMarcador();
+
+        if (contador >=9 && goldpoint >=3 )
+        {
+            Findeljuego.gameObject.SetActive(true); //finaliza el juego
+            Time.timeScale = 0; //cogela  al finalizar
         }
 
     }
