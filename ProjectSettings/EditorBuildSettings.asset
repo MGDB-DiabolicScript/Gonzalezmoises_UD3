@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/gonzalezdelboschmoises@UD3_movil.unity
     guid: 0d3d3fe2426946f41a878084f2d735f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/gonzalezdelboschmoises@UD3_movil1.unity
     guid: 63e273d655c54224cbc3cc90b72dddb8
+  - enabled: 1
+    path: Assets/Scenes/terreno.unity
+    guid: 744d873281ed9c14b9ef8c8156c4834f
   m_configObjects: {}
